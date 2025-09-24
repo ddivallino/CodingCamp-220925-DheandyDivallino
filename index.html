@@ -3,9 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    
+<body class="m-0 font-sans">
+    <!-- Navbar -->
+  <nav class="bg-neutral-900 fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#">
+            <img src="https://hybrid.co.id/wp-content/uploads/2019/06/3816aa13baa8e522f8e9bd18456b7db6_revou_logo.png" alt="Logo" class="w-10 h-10 rounded-full border-2 border-white">
+          </a>
+        </div>
+        
+        <!-- Menu Desktop -->
+        <div class="hidden md:flex space-x-6">
+          <a href="#" class="text-gray-300 hover:text-white">Home</a>
+          <a href="#" class="text-gray-300 hover:text-white">Our Profile</a>
+          <a href="#" class="text-gray-300 hover:text-white">Portfolio</a>
+          <a href="#" class="text-gray-300 hover:text-white">Message Us</a>
+        </div>
+
+        <!-- Tombol Mobile -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+      <a href="#" class="block text-gray-300 hover:text-white py-2">Home</a>
+      <a href="#" class="block text-gray-300 hover:text-white py-2">Tentang</a>
+      <a href="#" class="block text-gray-300 hover:text-white py-2">Layanan</a>
+      <a href="#" class="block text-gray-300 hover:text-white py-2">Kontak</a>
+    </div>
+  </nav>
+
+  <!-- Konten -->
+  <div class="mt-16 p-6 bg-[url('background.jpg')] h-[578px] w-[1366px] bg-cover bg-center mx-auto">
+    <h1 class="ml-25 text-3xl font-bold">Hi Dheandy, Welcome To Website</h1>
+    <p class="ml-25 mt-2 text-gray-700">Ini adalah website latihan pertama.</p>
+    <div class="h-[1000px]"></div>
+  </div>
+
+  <!-- Section Foto Lingkaran -->
+<section class="py-7 bg-neutral-900">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="ml-1 text-3xl text-gray-300 mb-6 font-bold">Our Headquarter</h2>
+    <div class="flex space-x-8 mt-10 mb-7">
+      <img src="jakarta.jpg" alt="Jakarta" class="w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition">
+      <img src="bandung.jpg" alt="Bandung" class="w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition">
+      <img src="surabaya.jpg" alt="Surabaya" class="w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition">
+    </div>
+  </div>
+</section>
+
+<!-- Form -->
+<div class="max-w-md mx-auto bg-white p-6 border border-gray-300 rounded-lg shadow-md mt-6">
+    <h1 class="mt-5 text-3xl font-bold mb-4">Message Us</h1>
+    <form class="space-y-4">
+        <label class="block text-sm font-medium text-gray-700">Nama</label>
+        <input type="text" class="border mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-2
+               focus:border-blue-500 focus:ring focus:ring-blue-200" />
+        <label class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
+        <input class="border mt-1 block w-full rounded-lg border-gray-300 shadow-sm p-2 focus:border-blue-500 focus:ring focus:ring-blue-200" type="date" min="0" max="120"/>
+        <label class="block text-sm font-medium text-gray-700">Jenis Kelamin</label>
+        <div class="flex">
+        <input class=" mr-1 h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500" type="radio" value="male" name="jenis-kelamin">
+        <label class="block text-sm font-medium text-gray-700">Laki-laki</label>
+        <input class=" ml-4 mr-1 h-4 w-4 text-blue-600 border-gray-300 focus:ring-blue-500" type="radio" value="female" name="jenis-kelamin">
+        <label class="block text-sm font-medium text-gray-700">Perempuan</label>
+        </div>
+        <label class="block text-sm font-medium text-gray-700">Pesan</label>
+        <textarea class="border block w-full rounded-lg border-gray-300 shadow-sm p-2
+               focus:border-blue-500 focus:ring focus:ring-blue-200" 
+          rows="5" cols="30" placeholder="Pesan"></textarea>
+        <button class="w-full py-2 px-4 bg-blue-600 text-white font-medium rounded-lg
+               hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300" type="submit">Submit</button>
+    </form>
+    </div>
+  <script src="script.js"></script>
 </body>
 </html>
