@@ -14,15 +14,16 @@
           <div class="flex items-center justify-between h-16">
           
           <!-- Logo -->
-          <div class="flex-shrink-0">
+          <div class="flex">
             <a href="#">
               <img src="assets/logo.png" alt="Logo" class="w-10 h-10 rounded-full border-2 border-white">
             </a>
+            <p class="mt-2 ml-5 font-bold text-gray-300">Siuverse</p>
           </div>
           
           <!-- Menu Desktop -->
           <div class="hidden md:flex space-x-6">
-            <a href="#" class="text-gray-300 hover:text-white">Home</a>
+            <a href="#" class="bold text-gray-300 hover:text-white">Home</a>
             <a href="#profile" class="text-gray-300 hover:text-white">Our Profile</a>
             <a href="#" class="text-gray-300 hover:text-white">Portfolio</a>
             <a href="#message" class="text-gray-300 hover:text-white">Message Us</a>
@@ -47,21 +48,102 @@
       </nav>
 
     <!-- Main Konten -->
-      <div class="mt-16 p-6 bg-[url('assets/background.jpg')] h-[578px] w-[1366px] bg-cover bg-center mx-auto">
-        <h1 class="ml-25 text-3xl font-bold">Hi <span id="username"></span>, Welcome To Website</h1>
-        <p class="ml-25 mt-2 text-gray-700">Ini adalah website portfolio saya.</p>
-        <div class="h-[1000px]"></div>
+    <section id="main-konten" class="bg-neutral-900 text-gray-200 py-12">
+      <div class="max-w-6xl mx-auto px-6">
+
+        <!-- Photo Banner -->
+        <div class="relative h-64 rounded-lg overflow-hidden shadow-lg">
+          <img src="assets/profile.jpg" alt="Company Banner" 
+              class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+            <h1 class="text-3xl md:text-4xl font-bold">Hi <span id="username"></span>, Welcome To Siuverse Website!</h1>
+          </div>
+        </div>
+
+        <!-- About Company -->
+        <div class="mt-10">
+          <h3 class="text-2xl font-semibold mb-3">Tentang Perusahaan</h3>
+          <p class="text-justify text-gray-300 leading-relaxed">
+              Siuverse adalah sebuah software house yang dibentuk oleh empat
+              mahasiswa dengan latar belakang keahlian teknologi informasi dan semangat
+              berwirausaha di bidang digital. Siuverse hadir untuk membantu digitalisasi bisnis
+              dan organisasi melalui pengembangan aplikasi yang inovatif, dan sesuai kebutuhan
+              pengguna.
+          </p>
+          <p class="text-justify text-gray-300 leading-relaxed">
+              Perusahaan ini dibentuk sebagai sarana pengembangan keterampilan
+              praktis, kolaborasi tim, dan kontribusi nyata kepada masyarakat melalui solusi
+              teknologi. Fokus kami adalah memberikan layanan pembuatan aplikasi berbasis
+              web dan mobile untuk semua sektor seperti UMKM, lembaga pendidikan, jasa
+              profesional, startup tahap awal, dan lain-lain</p>
+        </div>
+
+        <!-- Vision & Mission -->
+        <div class="mt-10 grid md:grid-cols-2 gap-8">
+          <!-- Visi -->
+          <div class="bg-neutral-800 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3">Visi</h3>
+            <p class="text-gray-300">
+              Menjadi partner teknologi terpercaya bagi pelaku bisnis dalam menghadapi era digital.
+            </p>
+          </div>
+          <!-- Misi -->
+          <div class="bg-neutral-800 p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3">Misi</h3>
+            <ul class="list-disc pl-5 text-gray-300 space-y-2">
+              <li>Membangun solusi teknologi yang sesuai kebutuhan pengguna.</li>
+              <li>Menyediakan layanan pengembangan aplikasi dengan pendekatan agile dan
+                  terpusat pada pengguna.</li>
+              <li>Menjunjung tinggi etika kerja dan integritas dalam setiap hubungan
+                  profesional dengan klien maupun mitra.</li>
+              <li>Membantu pelaku bisnis dalam transformasi digital yang terjangkau dan
+                  efisien.</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
 
         <!-- Section Profile -->
-        <section class="py-7 bg-neutral-900">
+        <section id="profile" class="py-7 bg-neutral-900">
           <div id="profile" class="max-w-6xl mx-auto px-4">
             <h2 class="ml-1 text-3xl text-gray-300 mb-6 font-bold">Our Profile</h2>
-            <div class="flex space-x-8 mt-10 mb-7">
-              <img src="assets/foto.jpg" alt="Jakarta" class="w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition">
-              <img src="assets/jakarta.jpg" alt="Jakarta" class="w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition">
-              <img src="assets/bandung.jpg" alt="Bandung" class="w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition">
-              <img src="assets/surabaya.jpg" alt="Surabaya" class="w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition">
+
+            <!-- Container -->
+            <div class="flex space-x-8 mt-10 mb-7 items-center">
+              <!-- Foto-foto -->
+              <div id="photo-container" class="flex space-x-8">
+                <img src="assets/foto.jpg" alt="Foto" 
+                    class="profile-img w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition cursor-pointer"
+                    data-name="Dheandy Divallino"
+                    data-asal="Bekasi"
+                    data-lulusan="Sarjana Sistem Informasi">
+
+                <img src="assets/jakarta.jpg" alt="Jakarta" 
+                    class="profile-img w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition cursor-pointer"
+                    data-name="Syahrul Choliq Mawardi"
+                    data-asal="Cimahi"
+                    data-lulusan="Sarjana Sistem Informasi">
+
+                <img src="assets/bandung.jpg" alt="Bandung" 
+                    class="profile-img w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition cursor-pointer"
+                    data-name="Sahlan Putra Pratama"
+                    data-asal="Bandung"
+                    data-lulusan="Sarjana Sistem Informasi">
+
+                <img src="assets/surabaya.jpg" alt="Surabaya" 
+                    class="profile-img w-35 h-35 rounded-full object-cover shadow-md hover:scale-105 transition cursor-pointer"
+                    data-name="Aloysius Antony Edward Woda"
+                    data-asal="Flores"
+                    data-lulusan="Sarjana Sistem Informasi">
+              </div>
+
+              <!-- Info Box -->
+              <div id="info-box" class="hidden text-gray-200 transition-opacity duration-500">
+                <h3 id="info-name" class="text-xl font-bold mb-2"></h3>
+                <p id="info-asal" class="mb-1"></p>
+                <p id="info-lulusan"></p>
+              </div>
             </div>
           </div>
         </section>
